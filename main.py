@@ -11,7 +11,7 @@ POST_ID = 301541  # 🔧 Cập nhật đúng ID bài City Holder Daily Combo
 URL_SOURCE = "https://miningcombo.com/city-holder/"
 TARGET_H2_EN = "City Holder Daily Quiz Answer – November 11, 2025"
 TARGET_H2_RU = "City Holder Daily Quiz Answer For Russia – November 11, 2025"
-CHECK_ANSWER = ["Mars", "Bitcoinsss"]  # hai đáp án đầu tiên để kiểm tra
+CHECK_ANSWER = ["Mars", "Bitcoin"]  # hai đáp án đầu tiên để kiểm tra
 
 # ================= SCRAPE =================
 def scrape_city_holder():
