@@ -25,9 +25,14 @@ def scrape_city_holder():
     if not pre_tag:
         raise RuntimeError("❌ Không tìm thấy <pre id='tw-target-text'> cho List 1")
 
-    list1_raw = pre_tag.decode_contents().strip()
-    list1 = [line.strip().split(". ", 1)[-1] for line in list1_raw.split("<br>") if line.strip()]
-    list1 = [x for x in list1 if x]  # lọc rỗng
+    raw_text = pre_tag.get_text(separator="\n").strip()
+    lines = [l.strip() for l in raw_text.splitlines() if l.strip()]
+    list1 = []
+    for line in lines:
+        # Xóa số thứ tự "01. ", "1. ", "02. "
+        cleaned = line.split(".", 1)[-1].strip() if "." in line else line.strip()
+        list1.append(cleaned)
+    
     print(f"[+] List 1 (EN) có {len(list1)} đáp án")
 
     # --- List 2: Russian answers ---
