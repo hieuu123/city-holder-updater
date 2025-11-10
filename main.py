@@ -72,7 +72,12 @@ def update_post_after_h2(target_h2_text, answers, lang_label="EN"):
     soup = BeautifulSoup(old_content, "html.parser")
 
     # 2️⃣ Find target <h2>
-    h2_tag = soup.find("h2", string=lambda t: t and target_h2_text in t)
+    h2_tag = soup.find("h2", string=lambda _: False)  # tránh lỗi None
+    for h2 in soup.find_all("h2"):
+        if target_h2_text.split("–")[0].strip() in h2.get_text(" ", strip=True):
+            h2_tag = h2
+            break
+
     if not h2_tag:
         print(f"[{lang_label}] ❌ Không tìm thấy H2:", target_h2_text)
         return
