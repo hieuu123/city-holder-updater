@@ -7,11 +7,11 @@ from bs4 import BeautifulSoup
 WP_URL = "https://blog.mexc.com/wp-json/wp/v2/posts"
 WP_USERNAME = os.getenv("WP_USERNAME")
 WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD")
-POST_ID = 301541  # 🔧 Cập nhật đúng ID bài City Holder Daily Combo
 URL_SOURCE = "https://miningcombo.com/city-holder/"
-TARGET_H2_EN = "City Holder Daily Quiz Answer – November 11, 2025"
-TARGET_H2_RU = "City Holder Daily Quiz Answer For Russia – November 11, 2025"
-CHECK_ANSWER = ["Mars", "Bitcoin"]  # hai đáp án đầu tiên để kiểm tra
+POST_ID = 302175  # 🔧 Cập nhật đúng ID bài City Holder Daily Combo
+TARGET_H2_EN = "City Holder Daily Quiz Answer – November 12, 2025"
+TARGET_H2_RU = "City Holder Daily Quiz Answer For Russia – November 12, 2025"
+CHECK_ANSWER = ["Brussels", "Sicily"]  # hai đáp án đầu tiên để kiểm tra
 
 # ================= SCRAPE =================
 def scrape_city_holder():
