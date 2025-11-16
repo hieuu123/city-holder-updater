@@ -8,10 +8,10 @@ WP_URL = "https://blog.mexc.com/wp-json/wp/v2/posts"
 WP_USERNAME = os.getenv("WP_USERNAME")
 WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD")
 URL_SOURCE = "https://miningcombo.com/city-holder/"
-POST_ID = 303116  # 🔧 Cập nhật đúng ID bài City Holder Daily Combo
-TARGET_H2_EN = "City Holder Daily Quiz Answer – November 16, 2025"
-TARGET_H2_RU = "City Holder Daily Quiz Answer For Russia – November 16, 2025"
-CHECK_ANSWER = ["Thor", "Christopher Columbus"]  # hai đáp án đầu tiên để kiểm tra
+POST_ID = 303199  # 🔧 Cập nhật đúng ID bài City Holder Daily Combo
+TARGET_H2_EN = "City Holder Daily Quiz Answer – November 17, 2025"
+TARGET_H2_RU = "City Holder Daily Quiz Answer For Russia – November 17, 2025"
+CHECK_ANSWER = ["Leonardo da Vinci", "Romulus"]  # hai đáp án đầu tiên để kiểm tra
 
 # ================= SCRAPE =================
 def scrape_city_holder():
